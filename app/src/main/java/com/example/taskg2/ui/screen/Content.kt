@@ -31,11 +31,11 @@ fun Content(tab: Int) {
     var loading by remember { mutableStateOf(false) }
 
     var tasks by remember { mutableStateOf(listOf(
-        Task("Estudiar compose", false),
-        Task("Estudiar fisica", false),
-        Task("Estudiar finanzas", false),
-        Task("Hacer el proyecto de POO", false),
-        Task("Hacer el examen de Android", false),
+        Task("Estudiar compose", false,1),
+        Task("Estudiar fisica", false,2),
+        Task("Estudiar finanzas", false,3),
+        Task("Hacer el proyecto de POO", false,4),
+        Task("Hacer el examen de Android", false,5),
         ))
     }
 

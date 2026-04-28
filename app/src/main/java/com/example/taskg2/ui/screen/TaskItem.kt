@@ -1,7 +1,9 @@
 package com.example.taskg2.ui.screen
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -34,7 +36,10 @@ fun TaskItem(task: Task, onCheck: () -> Unit)  {
            Checkbox(checked = task.completed
                , onCheckedChange = {onCheck()})
            Spacer(modifier = Modifier.width(16.dp))
-           Text(text = task.name,fontSize = 16.sp)
+           Column(modifier = Modifier.fillMaxSize()) {
+                Text(text = task.name,fontSize = 16.sp)
+                Text(text = "Prioridad: ${task.priority}",fontSize = 12.sp)
+           }
        }
     }
 }
